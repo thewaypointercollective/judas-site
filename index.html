@@ -745,24 +745,31 @@
   </footer>
 
   <script>
+    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx1phLayNKWHGdug3CFMEe8c07d6b0daAb4PDOAMJ-Xw6fsmkpeUBIei7_GQGdWr3Q4ew/exec';
+
     function handleSubmit(e, formId, successId) {
       e.preventDefault();
-      const email = e.target.querySelector('input[type="email"]').value;
+      var email = e.target.querySelector('input[type="email"]').value;
+      var btn = e.target.querySelector('button');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
 
-      // TODO: Replace this block with your email provider integration.
-      // Options: Mailchimp embedded form action URL, ConvertKit, Beehiiv, etc.
-      // Example with Mailchimp: change form action to your Mailchimp list URL
-      // and set method="post" with the hidden fields Mailchimp requires.
-
-      document.getElementById(formId).style.display = 'none';
-
-      // Hide nearby form-note
-      const note = document.getElementById(formId).nextElementSibling;
-      if (note && note.classList.contains('form-note')) note.style.display = 'none';
-
-      const success = document.getElementById(successId);
-      success.textContent = "You’re on the list. Thank you — this book was written for you.";
-      success.style.display = 'block';
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: 'email=' + encodeURIComponent(email)
+      }).then(function() {
+        document.getElementById(formId).style.display = 'none';
+        var note = document.getElementById(formId).nextElementSibling;
+        if (note && note.classList.contains('form-note')) note.style.display = 'none';
+        var success = document.getElementById(successId);
+        success.textContent = "You’re on the list. Thank you — this book was written for you.";
+        success.style.display = 'block';
+      }).catch(function() {
+        btn.textContent = 'Try Again';
+        btn.disabled = false;
+      });
     }
   </script>
 
