@@ -744,32 +744,43 @@
     <p>© Benjamin Gilmore, DMin · <a href="mailto:gilmore.benjamin@gmail.com">gilmore.benjamin@gmail.com</a></p>
   </footer>
 
+  <iframe name="hidden-submit" style="display:none;"></iframe>
+
   <script>
     var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx1phLayNKWHGdug3CFMEe8c07d6b0daAb4PDOAMJ-Xw6fsmkpeUBIei7_GQGdWr3Q4ew/exec';
 
     function handleSubmit(e, formId, successId) {
       e.preventDefault();
-      var email = e.target.querySelector('input[type="email"]').value;
-      var btn = e.target.querySelector('button');
+      var form = e.target;
+      var email = form.querySelector('input[type="email"]').value;
+      var btn = form.querySelector('button');
       btn.textContent = 'Sending…';
       btn.disabled = true;
 
-      fetch(SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: 'email=' + encodeURIComponent(email)
-      }).then(function() {
+      // Create a hidden form and submit it via iframe to bypass CORS
+      var tempForm = document.createElement('form');
+      tempForm.action = SCRIPT_URL;
+      tempForm.method = 'POST';
+      tempForm.target = 'hidden-submit';
+      tempForm.style.display = 'none';
+      var input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'email';
+      input.value = email;
+      tempForm.appendChild(input);
+      document.body.appendChild(tempForm);
+      tempForm.submit();
+      document.body.removeChild(tempForm);
+
+      // Show success after a short delay
+      setTimeout(function() {
         document.getElementById(formId).style.display = 'none';
         var note = document.getElementById(formId).nextElementSibling;
         if (note && note.classList.contains('form-note')) note.style.display = 'none';
         var success = document.getElementById(successId);
         success.textContent = "You’re on the list. Thank you — this book was written for you.";
         success.style.display = 'block';
-      }).catch(function() {
-        btn.textContent = 'Try Again';
-        btn.disabled = false;
-      });
+      }, 1000);
     }
   </script>
 
