@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms, Conditions &amp; Privacy Policy — Hello, My Name Is Judas</title>
+  <link rel="canonical" href="https://www.hellomynameisjudas.com/terms" />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --parchment:      #E8DCC8;
+      --parchment-mid:  #D4C4A8;
+      --ink:            #1A1410;
+      --ink-mid:        #3D3028;
+      --muted:          #8A7B6E;
+      --crimson:        #8B1A2E;
+      --crimson-dark:   #6B1222;
+      --rose:           #C4788A;
+      --black:          #0D0A08;
+      --white:          #F5EEE3;
+      --border:         #C8B89A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(224, 208, 182, 0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-title {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--crimson);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--crimson);
+      text-decoration: none;
+      padding: 9px 20px;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--crimson-dark); }
+
+    .page-header {
+      padding: 140px 24px 72px;
+      background: linear-gradient(160deg, #F2E8D2 0%, #D9C4A0 60%, #C4A878 100%);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .page-header .label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--crimson);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .page-header h1 {
+      font-family: 'League Spartan', sans-serif;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .page-header p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .toc {
+      max-width: 760px;
+      margin: 48px auto 0;
+      padding: 0 24px;
+    }
+
+    .toc-inner {
+      background: rgba(139,26,46,0.05);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 28px 32px;
+    }
+
+    .toc-inner p {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .toc-inner ol {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 32px;
+    }
+
+    .toc-inner ol li a {
+      font-size: 13px;
+      color: var(--crimson);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(139,26,46,0.2);
+      transition: border-color 0.2s;
+    }
+    .toc-inner ol li a:hover { border-color: var(--crimson); }
+
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 72px 24px 100px;
+    }
+
+    .content h2 {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 16px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--crimson);
+      margin-top: 52px;
+      margin-bottom: 14px;
+      padding-top: 52px;
+      border-top: 1px solid var(--border);
+    }
+
+    .content h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .content p {
+      font-size: 15px;
+      color: var(--ink-mid);
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+
+    .content p:last-child { margin-bottom: 0; }
+
+    .content a {
+      color: var(--crimson);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(139,26,46,0.3);
+      transition: border-color 0.2s;
+    }
+    .content a:hover { border-color: var(--crimson); }
+
+    .content ul {
+      margin: 12px 0 16px 20px;
+    }
+
+    .content ul li {
+      font-size: 15px;
+      color: var(--ink-mid);
+      line-height: 1.85;
+      margin-bottom: 6px;
+    }
+
+    .highlight-box {
+      background: rgba(139,26,46,0.05);
+      border-left: 3px solid var(--crimson);
+      border-radius: 0 4px 4px 0;
+      padding: 18px 24px;
+      margin: 20px 0;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    footer { background: var(--black); padding: 40px 24px; text-align: center; }
+
+    .footer-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--rose);
+      margin-bottom: 8px;
+    }
+
+    footer p { font-size: 12px; color: #4a3e34; }
+    footer a { color: #4a3e34; text-decoration: none; }
+    footer a:hover { color: var(--rose); }
+
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      .toc-inner ol { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-title" href="/">Hello, My Name Is Judas</a>
+    <a class="nav-cta" href="https://www.amazon.com/dp/B0HRCW3MVM" target="_blank" rel="noopener">Buy Now on Amazon</a>
+  </nav>
+
+  <div class="page-header">
+    <span class="label">Legal</span>
+    <h1>Terms, Conditions &amp; Privacy Policy</h1>
+    <p>Last updated: November 23, 2026</p>
+  </div>
+
+  <div class="toc">
+    <div class="toc-inner">
+      <p>Contents</p>
+      <ol>
+        <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+        <li><a href="#about">2. About the Site</a></li>
+        <li><a href="#ip">3. Intellectual Property</a></li>
+        <li><a href="#links">4. Third-Party Links</a></li>
+        <li><a href="#cookies">5. Cookies &amp; Analytics</a></li>
+        <li><a href="#privacy">6. Privacy Policy</a></li>
+        <li><a href="#ccpa">7. California Privacy Rights (CCPA)</a></li>
+        <li><a href="#warranties">8. Disclaimer of Warranties</a></li>
+        <li><a href="#liability">9. Limitation of Liability</a></li>
+        <li><a href="#governing">10. Governing Law</a></li>
+        <li><a href="#severability">11. Severability</a></li>
+        <li><a href="#changes">12. Changes to These Terms</a></li>
+        <li><a href="#contact">13. Contact</a></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <h2 id="acceptance">1. Acceptance of Terms</h2>
+    <p>By accessing and using hellomynameisjudas.com (the "Site"), you accept and agree to be bound by these Terms and Conditions and Privacy Policy. If you do not agree to these terms, please do not use the Site.</p>
+
+    <h2 id="about">2. About the Site</h2>
+    <p>This Site is the official website for the book <em>Hello, My Name Is Judas</em> by Dr. Benjamin Gilmore. It is operated by Benjamin Gilmore and The Waypointer Collective. The Site provides information about the book and the author, and links to purchase the book through third-party retailers.</p>
+
+    <h2 id="ip">3. Intellectual Property</h2>
+    <p>All content on this Site — including but not limited to text, design, graphics, logos, and book excerpts — is the property of Benjamin Gilmore and is protected by applicable copyright and intellectual property laws. You may not reproduce, distribute, or use any content from this Site without prior written permission from Benjamin Gilmore.</p>
+    <p>Brief quotations from the Site or the book may be used for review, commentary, or educational purposes, provided that proper attribution is given to Dr. Benjamin Gilmore and <em>Hello, My Name Is Judas</em>.</p>
+
+    <h2 id="links">4. Third-Party Links</h2>
+    <p>This Site contains links to third-party websites, including Amazon, for the purpose of purchasing the book. These links are provided for your convenience. We have no control over the content or practices of third-party sites and accept no responsibility for them. Visiting those sites is subject to their own terms and conditions and privacy policies.</p>
+
+    <h2 id="cookies">5. Cookies &amp; Analytics</h2>
+    <p>This Site uses Vercel Analytics, a privacy-friendly analytics service, to collect basic, anonymized usage data. This may include:</p>
+    <ul>
+      <li>Pages visited and time spent on the Site</li>
+      <li>Referring website or search engine</li>
+      <li>General geographic region (country or region level only)</li>
+      <li>Device type and browser type</li>
+    </ul>
+    <p>Vercel Analytics does not use cookies for tracking and does not collect personally identifiable information. No data is shared with advertisers. For more information on how Vercel handles data, see <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Vercel's Privacy Policy</a>.</p>
+    <p>Beyond analytics, this Site does not use tracking cookies, advertising cookies, or any third-party behavioral tracking.</p>
+
+    <h2 id="privacy">6. Privacy Policy</h2>
+    <p>Your privacy matters. This section explains what information we collect, how we use it, and what rights you have.</p>
+
+    <p><strong>What we collect:</strong> We do not collect personal information directly through this Site. If you contact us by email, we receive your name and email address solely for the purpose of responding to your message. We do not add you to any mailing list without your explicit consent.</p>
+
+    <p><strong>What we do not do:</strong> We do not sell, rent, trade, or share your personal information with any third party for marketing or commercial purposes.</p>
+
+    <p><strong>Data retention:</strong> Email correspondence is retained only as long as necessary to respond to your inquiry and is not stored in any database or CRM.</p>
+
+    <p><strong>Children's privacy:</strong> This Site is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has submitted personal information to us, please contact us and we will promptly delete it.</p>
+
+    <div class="highlight-box">
+      <p>In plain terms: we collect no personal data beyond what you voluntarily send us by email, and we use it only to reply to you. That's it.</p>
+    </div>
+
+    <h2 id="ccpa">7. California Privacy Rights (CCPA)</h2>
+    <p>If you are a California resident, the California Consumer Privacy Act (CCPA) provides you with certain rights regarding your personal information.</p>
+
+    <p><strong>Right to Know:</strong> You have the right to request information about what personal data we have collected about you, the categories of sources, the business purpose for collecting it, and any third parties it has been shared with.</p>
+
+    <p><strong>Right to Delete:</strong> You have the right to request that we delete any personal information we have collected from you, subject to certain exceptions.</p>
+
+    <p><strong>Right to Opt Out of Sale:</strong> We do not sell personal information. There is nothing to opt out of.</p>
+
+    <p><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your CCPA rights.</p>
+
+    <p>To exercise any of these rights, please contact us at <a href="mailto:gilmore.benjamin@gmail.com">gilmore.benjamin@gmail.com</a>. We will respond to verifiable requests within 45 days as required by law.</p>
+
+    <h2 id="warranties">8. Disclaimer of Warranties</h2>
+    <p>This Site is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant that the Site will be uninterrupted, error-free, or free of viruses or other harmful components. We reserve the right to modify or discontinue the Site at any time without notice.</p>
+
+    <h2 id="liability">9. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, Benjamin Gilmore and The Waypointer Collective shall not be liable for any indirect, incidental, special, consequential, or punitive damages — including loss of data, revenue, or goodwill — arising out of or related to your use of this Site or the content on it, even if we have been advised of the possibility of such damages.</p>
+
+    <h2 id="governing">10. Governing Law</h2>
+    <p>These Terms and Conditions are governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law principles. Any disputes arising from these terms or your use of the Site shall be subject to the exclusive jurisdiction of the state and federal courts located in San Diego County, California.</p>
+
+    <h2 id="severability">11. Severability</h2>
+    <p>If any provision of these Terms and Conditions is found to be unlawful, void, or unenforceable for any reason, that provision shall be deemed severable from the remaining terms and shall not affect the validity and enforceability of any remaining provisions.</p>
+
+    <h2 id="changes">12. Changes to These Terms</h2>
+    <p>We reserve the right to update these Terms and Conditions and Privacy Policy at any time. Changes will be posted on this page with an updated date at the top. Your continued use of the Site after any changes constitutes your acceptance of the revised terms.</p>
+
+    <h2 id="contact">13. Contact</h2>
+    <p>If you have any questions about these Terms, Conditions, or Privacy Policy — or wish to exercise any of your privacy rights — please contact us at:</p>
+    <p><a href="mailto:gilmore.benjamin@gmail.com">gilmore.benjamin@gmail.com</a></p>
+    <p style="margin-top: 48px;"><a href="/">&larr; Back to hellomynameisjudas.com</a></p>
+
+  </div>
+
+  <footer>
+    <p class="footer-title">Hello, My Name Is Judas</p>
+    <p>© Benjamin Gilmore, D.MIN. · <a href="/">hellomynameisjudas.com</a></p>
+  </footer>
+
+</body>
+</html>
